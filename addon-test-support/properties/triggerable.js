@@ -89,7 +89,7 @@ export function triggerable(event, selector, userOptions = {}) {
       return function(eventProperties = {}) {
         const executionContext = getExecutionContext(this);
         const options = Object.assign({ pageObjectKey: `${key}()` }, userOptions);
-        const staticEventProperties = assign({}, options.eventProperties);
+        const staticEventProperties = Object.assign({}, options.eventProperties);
 
         return executionContext.runAsync((context) => {
           const fullSelector = buildSelector(this, selector, options);
