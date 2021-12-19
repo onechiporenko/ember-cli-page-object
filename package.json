@@ -42,7 +42,7 @@
     "broccoli-file-creator": "^2.1.1",
     "broccoli-merge-trees": "^2.0.0",
     "ceibo": "~2.0.0",
-    "ember-cli-babel": "^6.16.0",
+    "ember-cli-babel": "^7.26.8",
     "ember-cli-node-assets": "^0.2.2",
     "ember-native-dom-helpers": "^0.7.0",
     "jquery": "^3.4.1",
