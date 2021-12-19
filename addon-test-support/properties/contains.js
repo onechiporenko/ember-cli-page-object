@@ -1,4 +1,3 @@
-import { assign } from '../-private/helpers';
 import { findMany, findOne } from '../extend';
 import { A } from '@ember/array';
 
@@ -96,7 +95,7 @@ export function contains(selector, userOptions = {}) {
 
     get(key) {
       return function(textToSearch) {
-        let options = assign({
+        let options = Object.assign({
           pageObjectKey: `${key}("${textToSearch}")`
         }, userOptions);
 

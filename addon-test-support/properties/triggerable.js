@@ -1,5 +1,4 @@
 import {
-  assign,
   buildSelector,
   findClosestValue
 } from '../-private/helpers';
@@ -89,7 +88,7 @@ export function triggerable(event, selector, userOptions = {}) {
     get(key) {
       return function(eventProperties = {}) {
         const executionContext = getExecutionContext(this);
-        const options = assign({ pageObjectKey: `${key}()` }, userOptions);
+        const options = Object.assign({ pageObjectKey: `${key}()` }, userOptions);
         const staticEventProperties = assign({}, options.eventProperties);
 
         return executionContext.runAsync((context) => {
