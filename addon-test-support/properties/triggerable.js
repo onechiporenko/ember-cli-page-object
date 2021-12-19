@@ -97,7 +97,7 @@ export function triggerable(event, selector, userOptions = {}) {
 
           context.assertElementExists(fullSelector, options);
 
-          const mergedEventProperties = assign(staticEventProperties, eventProperties);
+          const mergedEventProperties = Object.assign(staticEventProperties, eventProperties);
           return context.triggerEvent(fullSelector, container, options, event, mergedEventProperties);
         });
       };
